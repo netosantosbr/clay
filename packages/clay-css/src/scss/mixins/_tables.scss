@@ -68,7 +68,7 @@
 				th {
 					@include clay-css(map-deep-get($map, thead, th));
 
-					[href] {
+					a[href] {
 						@include clay-link(map-deep-get($map, thead, th, href));
 					}
 				}
@@ -78,7 +78,7 @@
 			td {
 				@include clay-css(map-get($map, table-cell));
 
-				[href] {
+				a[href] {
 					@include clay-link(map-deep-get($map, table-cell, href));
 				}
 			}
@@ -330,7 +330,7 @@
 						map-deep-get($map, table-disabled, table-cell)
 					);
 
-					[href] {
+					a[href] {
 						@include clay-link(
 							map-deep-get($map, table-disabled, table-cell, href)
 						);
@@ -364,6 +364,30 @@
 						map-deep-get($map, autofit-col, last-child)
 					);
 				}
+			}
+
+			.autofit-col-checkbox {
+				@include clay-css(map-get($map, autofit-col-checkbox));
+			}
+
+			.autofit-col-icon {
+				@include clay-css(map-get($map, autofit-col-icon));
+			}
+
+			.autofit-col-toggle {
+				@include clay-css(map-get($map, autofit-col-toggle));
+			}
+
+			.component-action {
+				@include clay-link(map-get($map, component-action));
+			}
+
+			.component-drag {
+				@include clay-link(map-get($map, component-drag));
+			}
+
+			.component-toggle {
+				@include clay-link(map-get($map, component-toggle));
 			}
 
 			.custom-control,
